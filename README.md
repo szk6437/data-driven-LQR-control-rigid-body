@@ -10,9 +10,9 @@ This methodology relies on solving a finite-horizon linear quadratic regulation 
 By framing the LQR problem as a one-shot semidefinite program, the control law is computed entirely from data. This avoids the traditional "indirect" approach, where a model is first determined from data and the control law is subsequently designed based on that model.
 
 ## Repository Structure
-* `EI.Rigid.py`: Generates the necessary state and input trajectories by simulating multiple experiments with varying initial conditions and exponentially decaying control inputs. 
-* `LMI.Robot.py`: Processes the sequence of historical inputs and states to formulate and solve the Linear Matrix Inequalities (LMIs) using CVXPY. It recovers the optimal time-varying state feedback gains ($K^*$).
-* `StateFeedback.Robot.py`: Simulates the closed-loop physical dynamics of the system over time, demonstrating the stabilization achieved by the computed optimal feedback gains.
+* `DataGeneration.Rigid.py`: Generates the necessary state and input trajectories by simulating multiple experiments with varying initial conditions and exponentially decaying control inputs. 
+* `LMI.Rigid.py`: Processes the sequence of historical inputs and states to formulate and solve the Linear Matrix Inequalities (LMIs) using CVXPY. It recovers the optimal time-varying state feedback gains ($K^*$).
+* `StateFeedback.Rigid.py`: Simulates the closed-loop physical dynamics of the system over time, demonstrating the stabilization achieved by the computed optimal feedback gains.
 
 ## Dependencies
 * `numpy`
